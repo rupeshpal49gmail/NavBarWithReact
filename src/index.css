@@ -1,12 +1,1 @@
 @import "tailwindcss";
-
-/* .navBar {
-  display: flex;
-} */
-
-.navBar ul {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 70px;
-}
