@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import navBarMenu from "../dataColl/data";
 import { FaDumbbell } from "react-icons/fa6";
 import { CiSearch } from "react-icons/ci";
 import { PiShoppingCartThin } from "react-icons/pi";
+import { MdMenu } from "react-icons/md";
+import ResponsiveMenu from "./ResponsiveMenu";
 
 function Navbar() {
+  const [open, setOpen] = useState(false);
   return (
     <>
       <nav>
@@ -40,9 +43,18 @@ function Navbar() {
             </button>
           </div>
           {/* Mobile hamburger Menu section */}
+          <div
+            className="md:hidden"
+            onClick={() => {
+              setOpen(!open);
+            }}
+          >
+            <MdMenu className="text-4xl" />
+          </div>
         </div>
       </nav>
       {/* Mobile or responsive sidebar section */}
+      <ResponsiveMenu open={open} />
     </>
   );
 }

@@ -20,7 +20,7 @@ const navBarMenu = [
     link: "/aboutus",
   },
   {
-    id: 1,
+    id: 5,
     title: "Contact Us",
     link: "/contactus",
   },
